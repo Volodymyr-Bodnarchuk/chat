@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply h-screen font-mono;
+  @apply h-screen font-mono tracking-tighter;
 }

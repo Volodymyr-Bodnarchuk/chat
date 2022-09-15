@@ -1,5 +1,5 @@
 import { CheckCircle, MagnifyingGlass, PaperPlaneRight } from 'phosphor-react';
-import type { FC, ReactNode } from 'react';
+import { FC, memo, ReactNode, useState } from 'react';
 import { data, locale } from '../helpers';
 import { localeToNumeric } from '../helpers/locale';
 import { Avatar } from './avatar.component';
@@ -10,8 +10,13 @@ type WrapperProps = {
 };
 
 const users = Object.keys(data);
-console.log();
 const Wrapper: FC<WrapperProps> = ({ children }) => {
+  const [currentChatName, setCurrentChatName] = useState('Alice Freeman');
+
+  const handleChatClick = (chat) => {
+    setCurrentChatName(chat);
+  };
+  console.log('rendering');
   return (
     <div className='flex border-2 border-[#e0e0e0] rounded-lg h-[900px] w-[1400px]'>
       <section className='w-2/3'>
@@ -34,11 +39,12 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
         </div>
         <h2 className='text-[#75c7fa] px-3 text-2xl py-8'>Chats</h2>
 
-        <nav className='px-3'>
+        <nav className=''>
           {users.map((user) => (
-            <div
+            <button
+              onClick={() => handleChatClick(data[user].name)}
               key={data[user].name}
-              className='flex border-b-[1px] py-4 items-center'
+              className='flex text-left w-full border-b-[1px] py-4 items-center px-3'
             >
               <Avatar src={data[user].img} checked className='py-2' />
               <div className=''>
@@ -55,7 +61,7 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
               <div className='text-[#9b9b9b] mt-2 text-xs tracking-tighter ml-auto'>
                 {new Date().toLocaleDateString('en-US', localeToNumeric)}
               </div>
-            </div>
+            </button>
           ))}
         </nav>
       </section>
@@ -64,20 +70,23 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
         <div className='flex py-4 items-center px-3'>
           <div className='flex py-4 items-center '>
             <span className='bg-[#ccc] w-14 h-14 overflow-hidden rounded-full inline-block'>
-              <img src={data['Josefina'].img} className='w-14 h-14' />
+              <img src={data[currentChatName].img} className='w-14 h-14' />
             </span>
             <CheckCircle className='text-[green] relative top-5 right-4' />
           </div>
-          {data['Josefina'].name}
+          {data[currentChatName].name}
         </div>
 
         <div className='border-y-[1px] px-3 flex flex-col h-full bg-secondary'>
-          {data['Josefina'].messages.map((message) =>
+          {data[currentChatName].messages.map((message) =>
             message.forwarded ? (
               <div key={message.id} className='flex flex-col text-white w-full'>
                 <div className='flex py-4'>
                   <span className='bg-[#ccc] w-14 h-14 overflow-hidden rounded-full inline-block mr-3'>
-                    <img src={data['Josefina'].img} className='w-14 h-14' />
+                    <img
+                      src={data[currentChatName].img}
+                      className='w-14 h-14'
+                    />
                   </span>
 
                   <div>
