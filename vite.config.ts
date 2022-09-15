@@ -5,9 +5,9 @@ import { environment } from './src/helpers';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: environment.port,
+    port: 3000,
   },
   preview: {
-    port: environment.previewPort,
+    port: 3001,
   },
 });
