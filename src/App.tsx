@@ -1,12 +1,9 @@
-import { Counter } from './components/counter';
-import { Toggler } from './components/toggler.component';
+import { Toggler, Wrapper } from './components';
 
 function App() {
   return (
-    <div>
-      <Counter />
-
-      <Toggler />
+    <div className='h-screen w-full flex items-center justify-center'>
+      <Wrapper />
     </div>
   );
 }

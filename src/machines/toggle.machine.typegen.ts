@@ -2,10 +2,6 @@
 
 export interface Typegen0 {
   "@@xstate/typegen": true;
-  eventsCausingActions: {
-    consoleLogValue: "FOO";
-    consoleLogValueAgain: "FOO";
-  };
   internalEvents: {
     "xstate.init": { type: "xstate.init" };
   };
@@ -15,6 +11,10 @@ export interface Typegen0 {
     services: never;
     guards: never;
     delays: never;
+  };
+  eventsCausingActions: {
+    consoleLogValue: "FOO";
+    consoleLogValueAgain: "FOO";
   };
   eventsCausingServices: {};
   eventsCausingGuards: {};
