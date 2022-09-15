@@ -1,7 +1,9 @@
 const data = {
+  selfAvatar:
+    'https://avataaars.io/?avatarStyle=Transparent&topType=NoHair&accessoriesType=Blank&facialHairType=MoustacheFancy&facialHairColor=Black&clotheType=ShirtVNeck&clotheColor=Heather&eyeType=Squint&eyebrowType=UpDown&mouthType=Smile&skinColor=Light',
   Josefina: {
     name: 'Josefina',
-    img: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairBob&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=Blue02&eyeType=Default&eyebrowType=Angry&mouthType=ScreamOpen&skinColor=Light',
+    img: 'https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=Blue02&eyeType=Default&eyebrowType=Angry&mouthType=ScreamOpen&skinColor=Light',
     messages: [
       {
         id: 1,
@@ -34,7 +36,7 @@ const data = {
   },
   'Alice Freeman': {
     name: 'Alice Freeman',
-    img: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Wayfarers&hairColor=Auburn&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Close&eyebrowType=UpDown&mouthType=ScreamOpen&skinColor=DarkBrown',
+    img: 'https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight&accessoriesType=Wayfarers&hairColor=Auburn&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Close&eyebrowType=UpDown&mouthType=ScreamOpen&skinColor=DarkBrown',
     messages: [
       {
         id: 1,
@@ -67,7 +69,7 @@ const data = {
   },
   Velazquez: {
     name: 'Velazquez',
-    img: 'https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads01&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=Pink&eyeType=Default&eyebrowType=RaisedExcitedNatural&mouthType=Smile&skinColor=Light',
+    img: 'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairDreads01&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=Pink&eyeType=Default&eyebrowType=RaisedExcitedNatural&mouthType=Smile&skinColor=Light',
     messages: [
       {
         id: 1,

@@ -14,15 +14,17 @@ const Input: FC<InputProps> = ({
   className,
 }) => {
   return (
-    <>
+    <div
+      className={`flex p-3 border-2 border-[#efefef] rounded-3xl bg-white ${className}`}
+    >
       {iconLeft && iconLeft}
       <input
-        className={`w-full appearance-none placeholder-[#ccc] text-black focus:outline-none disabled:cursor-not-allowed ${className}`}
+        className={`w-full appearance-none placeholder-[#ccc] text-black focus:outline-none disabled:cursor-not-allowed `}
         type='text'
         placeholder={placeholder}
       />
       {iconRight && iconRight}
-    </>
+    </div>
   );
 };
 

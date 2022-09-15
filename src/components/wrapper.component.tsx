@@ -1,6 +1,7 @@
-import { CheckCircle, PaperPlaneRight } from 'phosphor-react';
+import { CheckCircle, MagnifyingGlass, PaperPlaneRight } from 'phosphor-react';
 import type { FC, ReactNode } from 'react';
 import { data, locale } from '../helpers';
+import { Avatar } from './avatar.component';
 import { Input } from './input.component';
 
 type WrapperProps = {
@@ -9,13 +10,19 @@ type WrapperProps = {
 
 const Wrapper: FC<WrapperProps> = ({ children }) => {
   return (
-    <div className='flex border-2 border-[#e0e0e0] rounded-lg h-[900px] w-[900px]'>
-      <section className='w-1/3 '>
-        <div className='bg-primary'>
-          <div>icon</div>
-          <input className='bg-black' type='text' />
+    <div className='flex border-2 border-[#e0e0e0] rounded-lg h-[900px] w-[1100px]'>
+      <section className='w-2/3'>
+        <div className='bg-primary px-3 py-4'>
+          <Avatar src={data.selfAvatar} checked className='py-2' />
+          <Input
+            className='mt-2'
+            placeholder='Search or start new chat'
+            iconLeft={
+              <MagnifyingGlass className='text-[#bebebe] mr-2' size={24} />
+            }
+          />
         </div>
-        <hr />
+
         <h3>CHATS</h3>
         <nav>
           <ul>
@@ -27,11 +34,13 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
       </section>
 
       <section className='w-full flex flex-col h-full border-l-[1px]'>
-        <div className='flex py-4 items-center'>
-          <i>
-            <img src={data['Josefina'].img} className='mr-2 w-14 h-14' />
-            <CheckCircle className='text-[green] relative left-9 bottom-3' />
-          </i>
+        <div className='flex py-4 items-center px-3'>
+          <div className='flex py-4 items-center '>
+            <span className='bg-[#ccc] w-14 h-14 overflow-hidden rounded-full inline-block'>
+              <img src={data['Josefina'].img} className='w-14 h-14' />
+            </span>
+            <CheckCircle className='text-[green] relative top-5 right-4' />
+          </div>
           {data['Josefina'].name}
         </div>
 
@@ -40,7 +49,10 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
             message.forwarded ? (
               <div className='flex flex-col text-white w-full'>
                 <div className='flex py-4'>
-                  <img src={data['Josefina'].img} className='mr-2 w-14 h-14' />
+                  <span className='bg-[#ccc] w-14 h-14 overflow-hidden rounded-full inline-block mr-3'>
+                    <img src={data['Josefina'].img} className='w-14 h-14' />
+                  </span>
+
                   <div>
                     <div className='text-sm bg-[#3e3e3e] rounded-3xl px-5 py-3  max-w-sm'>
                       {message.text}
@@ -69,14 +81,11 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
         </div>
 
         <div className='mt-auto items-center py-8 bg-primary'>
-          <div className='flex p-3 w-[90%] mx-auto border-2 border-[#efefef] rounded-3xl bg-white'>
-            <Input
-              placeholder='Type your message'
-              iconRight={
-                <PaperPlaneRight className='text-[#777777]' size={24} />
-              }
-            />
-          </div>
+          <Input
+            className='w-[90%] mx-auto'
+            placeholder='Type your message'
+            iconRight={<PaperPlaneRight className='text-[#777777]' size={24} />}
+          />
         </div>
       </section>
 
