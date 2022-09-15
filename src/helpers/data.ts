@@ -1,6 +1,4 @@
 const data = {
-  selfAvatar:
-    'https://avataaars.io/?avatarStyle=Transparent&topType=NoHair&accessoriesType=Blank&facialHairType=MoustacheFancy&facialHairColor=Black&clotheType=ShirtVNeck&clotheColor=Heather&eyeType=Squint&eyebrowType=UpDown&mouthType=Smile&skinColor=Light',
   Josefina: {
     name: 'Josefina',
     img: 'https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=Blue02&eyeType=Default&eyebrowType=Angry&mouthType=ScreamOpen&skinColor=Light',
@@ -31,6 +29,12 @@ const data = {
         id: 5,
         text: 'You?',
         timeStamp: new Date().toLocaleDateString(),
+      },
+      {
+        id: 6,
+        text: 'Great! Thank',
+        timeStamp: new Date().toLocaleDateString(),
+        forwarded: true,
       },
     ],
   },
@@ -65,6 +69,12 @@ const data = {
         text: 'You?',
         timeStamp: new Date().toLocaleDateString(),
       },
+      {
+        id: 6,
+        text: 'Sorry! Got to go',
+        timeStamp: new Date().toLocaleDateString(),
+        forwarded: true,
+      },
     ],
   },
   Velazquez: {
@@ -97,6 +107,12 @@ const data = {
         id: 5,
         text: 'You?',
         timeStamp: new Date().toLocaleDateString(),
+      },
+      {
+        id: 6,
+        text: 'Fuck off!',
+        timeStamp: new Date().toLocaleDateString(),
+        forwarded: true,
       },
     ],
   },

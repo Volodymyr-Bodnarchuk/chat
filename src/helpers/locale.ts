@@ -5,4 +5,9 @@ const locale = {
   hour: '2-digit' as const,
   minute: '2-digit' as const,
 };
-export { locale };
+const localeToNumeric = {
+  year: 'numeric' as const,
+  month: 'short' as const,
+  day: 'numeric' as const,
+};
+export { locale, localeToNumeric };
