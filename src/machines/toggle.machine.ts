@@ -27,7 +27,7 @@ const toggleMachine = createMachine(
   {
     actions: {
       consoleLogValueAgain: (ctx) => console.log(ctx.value),
-      consoleLogValue: (ctx, event) => console.log(ctx.value),
+      consoleLogValue: (ctx, event) => console.log(event.value),
     },
   }
 );
